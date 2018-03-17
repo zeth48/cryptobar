@@ -28,6 +28,7 @@ function createWindow(){
  	});
  	const iconPath = path.join(__dirname, 'img/bitcoin.png');
  	tray = new Tray(iconPath);
+ 	//The click event is ignored when using an app indicator tray icon.
  	tray.on('click', (event) => {
  		var screen = electron.screen;		//Gets info about the display
     	const cursorPosition = screen.getCursorScreenPoint();
@@ -35,7 +36,5 @@ function createWindow(){
 	    window.setPosition(cursorPosition.x - (WIN_LEN/2),  cursorPosition.y);
 		window.isVisible() ? window.hide() : window.show();
  	});
-
 }
 app.on('ready', createWindow);
-	

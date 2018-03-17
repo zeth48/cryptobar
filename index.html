@@ -3,24 +3,9 @@
     <head>
         <meta charset="UTF-8"/>
         <link rel="stylesheet" type="text/css" href="index.css">
-        <title>Hello World</title>
+        <title>CryptoBar</title>
     </head>
-    <body>
-        <div class="container">
-            <div class="popover">
-                    <div class="header">
-                        <h1>Hello World</h1>
-                    </div>
-                    <div class="menu">
-                        <a class="config" href="#" onclick="return config();">&nbsp;</a>
-                    </div>
-            </div>
-        </div>
-    </body>
-    <script>
-        function config() {
-            const ipcRenderer = require('electron').ipcRenderer;
-            ipcRenderer.send('show-config-menu');
-        }
-    </script>
+    <input type="button" id="fetch" value="yolo">
+    <p id= "para"></p>
+    <script src="test.js"></script>
 </html>
